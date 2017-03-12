@@ -21,7 +21,7 @@ export class PageComponent{
                 this.page = page;
                 this.title = page.title;
                 this.body = page.body;
-                this.id = page.id
+                this.id = page.id;
             },
             error => console.log(error)
         );
