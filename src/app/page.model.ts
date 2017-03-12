@@ -1,5 +1,5 @@
 export interface Page {
-	id?: number | string;
+	id?: number;
 	title: string;
 	body: string;
     createDate: Date;
