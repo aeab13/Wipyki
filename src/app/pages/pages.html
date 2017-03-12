@@ -1,0 +1,6 @@
+<h1>Pages</h1>
+<div class="list-group">    
+    <a class="list-group-item" [routerLink]="['/pages', page.id]" *ngFor="let page of pages">
+        <a>{{page.title}}</a>
+     </a>
+</div>

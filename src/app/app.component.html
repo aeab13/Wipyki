@@ -1,3 +1,69 @@
-<h1>
-  {{title}}
-</h1>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" a [routerLink]="['/']">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+     <div id="navbar" class="navbar-collapse collapse" [collapse]="isCollapsed">
+      <ul class="nav navbar-nav">
+        <li><!--class="active"--><a [routerLink]="['/pages']">Pages<span class="sr-only">(current)</span></a></li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">About</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li class="dropdown" dropdown>
+          <a href="#" class="dropdown-toggle" id="single-button" type="button" dropdownToggle>Dropdown <span class="caret"></span></a>
+          <ul dropdownMenu>
+            <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Log out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div  class="container theme-showcase" role="main">
+<router-outlet></router-outlet>
+</div>
+<!--
+<md-toolbar color="primary">
+    <button [routerLink]="['/']" md-button>Home</button>
+    <button [routerLink]="['/pages']" md-button>Pages</button>
+</md-toolbar>
+
+<md-input-container class="example-full-width">
+  <input mdInput placeholder="Search!">
+</md-input-container>
+
+<router-outlet></router-outlet>
+-->
+<!--
+<input #idpost type="text">
+<button (click)="search(idpost.value)">
+  Buscar
+</button>
+<h1>{{title}}</h1>
+<p>{{body}}</p>-->
+<!--
+<ul>
+  <li *ngFor="let hero of heroes">{{hero.name}}</li>
+</ul>
+-->

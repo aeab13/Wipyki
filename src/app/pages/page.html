@@ -1,0 +1,5 @@
+
+<h1>{{title}}</h1>
+<div [innerHTML]="body|MarkdownToHtml"></div>
+<!--<textarea class="form-control" [(ngModel)]="body" rows="5" id="comment"></textarea>-->
+<button type="button" [routerLink]="['/pages/edit', id]" class="btn btn-default">Edit</button>
