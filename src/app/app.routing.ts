@@ -9,8 +9,9 @@ import { AppComponent } from './app.component'
 const appRoutes = [
     { path: 'about', component: AboutComponent},
     { path: 'pages', component: PagesComponent},
-    { path: 'pages/:id', component: PageComponent},
     { path: 'pages/edit/:id', component: EditPageComponent},
+    { path: 'pages/new', component: EditPageComponent},
+    { path: 'pages/:id', component: PageComponent},
     { path: '', component: AboutComponent}
 ]
 

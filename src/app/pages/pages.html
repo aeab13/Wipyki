@@ -1,4 +1,7 @@
 <h1>Pages</h1>
+<button type="button" class="btn btn-primary" (click)="newPage()">New page</button>
+<br/>
+<br/>
 <div class="list-group">    
     <a class="list-group-item" [routerLink]="['/pages', page.id]" *ngFor="let page of pages">
         <a>{{page.title}}</a>

@@ -2,6 +2,7 @@ export interface Page {
 	id?: number;
 	title: string;
 	body: string;
-    createDate: Date;
-    lastEditDate: Date;
+    create_date?: Date;
+    last_edit_date?: Date;
+	author?: number;
 }

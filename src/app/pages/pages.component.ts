@@ -23,4 +23,7 @@ export class PagesComponent implements OnInit {
         error => console.log(error)
       );
     }
+    newPage(){
+      this.router.navigate(['/pages/new']);
+    }
 }
