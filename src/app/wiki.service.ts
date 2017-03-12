@@ -24,20 +24,20 @@ export class WikiService {
 			.catch(error => this.handleError(error));
 	}
 
-	addBook(page: Page) {
+	addPage(page: Page) {
 		return this.http.post(PAGES_URL, page)
 			.map(response => response.json())
 			.catch(error => this.handleError(error));
 	}
 
-	removeBook(page: Page) {
+	removePage(page: Page) {
 		return this.http.delete(PAGES_URL + page.id)
 			.map(response => response.json())
 			.catch(error => this.handleError(error));
 	}
 
-	updateBook(page: Page) {
-		return this.http.put(PAGES_URL + page.id, page)
+	updatePage(page: Page) {
+		return this.http.put(PAGES_URL + page.id + '/', page)
 			.map(response => response.json())
 			.catch(error => this.handleError(error));
 	}
