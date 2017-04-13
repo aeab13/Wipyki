@@ -10,8 +10,7 @@ import { PageComponent } from './pages/page.component';
 import { EditPageComponent } from './pages/edit_page.component';
 import { WikiService } from './wiki.service'
 import { routing } from './app.routing';
-import { MarkdownModule } from 'angular2-markdown';
-import {MarkdownToHtmlPipe} from 'markdown-to-html-pipe';
+import { MarkdownToHtmlPipe } from 'markdown-to-html-pipe';
 import { CollapseDirective } from 'ng2-bootstrap'
 import { TabsModule } from 'ng2-bootstrap/tabs';
 import { ButtonsModule } from 'ng2-bootstrap/buttons';
@@ -33,8 +32,7 @@ import { ButtonsModule } from 'ng2-bootstrap/buttons';
     routing,
     DropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ButtonsModule.forRoot(),
-    MarkdownModule.forRoot()
+    ButtonsModule.forRoot()
   ],
   providers: [WikiService],
   bootstrap: [AppComponent]
