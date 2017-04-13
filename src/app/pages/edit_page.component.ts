@@ -11,7 +11,7 @@ import { Page } from '../page.model';
 export class EditPageComponent{
     page: Page;
     title: string;
-    body: string;
+    content: string;
     id: number;
     isNew: boolean = false;
 
@@ -22,19 +22,19 @@ export class EditPageComponent{
                 page => {
                     this.page = page;
                     this.title = page.title;
-                    this.body = page.body;
+                    this.content = page.content;
                     this.id = page.id;
                 },
                 error => console.log(error)
             );
         } else{
-            this.page = {title:'', body: '', create_date: new Date()};
+            this.page = {title:'', content: '', create_date: new Date()};
             this.isNew = true;
         }
     }
     savePage(){
         this.page.title = this.title;
-        this.page.body = this.body;
+        this.page.content = this.content;
         this.page.id = this.id;
         console.log('Date: ' + new Date);
         this.page.last_edit_date = new Date();

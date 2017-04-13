@@ -1,4 +1,4 @@
 
 <h1>{{title}}</h1>
-<div [innerHTML]="body|MarkdownToHtml"></div>
+<div [innerHTML]="content|MarkdownToHtml"></div>
 <button type="button" [routerLink]="['/pages/edit', id]" class="btn btn-primary">Edit</button>

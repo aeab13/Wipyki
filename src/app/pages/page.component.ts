@@ -12,7 +12,7 @@ export class PageComponent{
     
     private page: Page;
     private title: string;
-    private body: string;
+    private content: string;
     private id: string;
     constructor(private router:Router, activatedRoute: ActivatedRoute, private service: WikiService) {
         let id = activatedRoute.snapshot.params['id'];
@@ -20,7 +20,7 @@ export class PageComponent{
             page => {
                 this.page = page;
                 this.title = page.title;
-                this.body = page.body;
+                this.content = page.content;
                 this.id = page.id;
             },
             error => console.log(error)
